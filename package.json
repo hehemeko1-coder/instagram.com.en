@@ -1,0 +1,14 @@
+{
+  "name": "instagram-awareness-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A clearly labeled phishing-awareness login simulation. Never collects or stores passwords.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "express-rate-limit": "^7.5.0"
+  }
+}
