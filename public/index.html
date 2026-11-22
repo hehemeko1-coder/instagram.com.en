@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="A clearly labeled login security-awareness simulation.">
+  <title>Login Awareness Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="lab-banner"><strong>SECURITY AWARENESS LAB</strong><span>SIMULATION ONLY · NOT INSTAGRAM · USE DUMMY DETAILS</span></div>
+  <main class="page">
+    <section class="login-card" aria-labelledby="brand">
+      <div class="brand" id="brand">Instagram</div>
+      <p class="intro">A familiar-looking sign-in screen can still be a trap. This exercise demonstrates the warning signs.</p>
+      <form id="login-form">
+        <label class="sr-only" for="username">Demo username</label>
+        <input id="username" name="username" type="text" placeholder="Phone number, username, or email" autocomplete="off" maxlength="128" required>
+        <label class="sr-only" for="password">Demo password</label>
+        <input id="password" name="password" type="password" placeholder="Password (do not use a real password)" autocomplete="new-password" maxlength="256" required>
+        <button id="login-button" type="submit">Log in (simulation)</button>
+      </form>
+      <div class="or"><span></span> OR <span></span></div>
+      <a class="forgot" href="#lesson">Forgot password?</a>
+      <p class="fine-print">Training page only. No Instagram account is accessed or authenticated.</p>
+    </section>
+    <section class="lesson" id="lesson" aria-live="polite">
+      <h1>Before you sign in</h1>
+      <p>Check the domain carefully. A page can copy a brand's appearance without belonging to that brand.</p>
+      <ul>
+        <li>Verify the website address before entering credentials.</li>
+        <li>Use a password manager; it can help detect an unfamiliar domain.</li>
+        <li>Never reuse passwords, and enable multi-factor authentication.</li>
+      </ul>
+      <p id="status" class="status">Use a clearly fictional username and a made-up password for this exercise. The password stays in your browser and is never transmitted or saved.</p>
+    </section>
+  </main>
+  <footer>Authorized awareness training · No real authentication · No password collection</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
