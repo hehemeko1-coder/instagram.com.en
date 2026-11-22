@@ -34,15 +34,15 @@ app.post("/api/attempt", attemptLimiter, (req, res) => {
     return res.status(400).json({ error: "Invalid demo submission." });
   }
 
-  // Deliberately accept metadata only. A password value is never read or stored.
-  const safeUsername = username.trim().replace(/[\\r\\n\\t]/g, " ").replace(/[|]/g, "_");
+  // Metadata only: the server never accepts, reads, or stores a password value.
+  const safeUsername = username.trim().replace(/[\r\n\t]/g, " ").replace(/[|]/g, "_");
   const line = [
     new Date().toISOString(),
     "username=" + safeUsername,
     "password_field_filled=" + passwordProvided,
     "password_length=" + passwordLength,
     "result=training_simulation"
-  ].join(" | ") + "\\n";
+  ].join(" | ") + "\n";
 
   try {
     fs.mkdirSync(LOG_DIR, { recursive: true });
